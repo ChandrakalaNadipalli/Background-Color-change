@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            transition: .1s;
+        }
+        h1{
+            text-align: center;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body onload="randomColor()">
+    <h1>Random Background Color</h1>
+    <script>
+        function randomColor(){
+            var colors = ["#f44336", "#e91e63", "#9c27b0", "#673ab7", "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4", "#009688", "#4caf50", "#8bc34a", "#cddc39", "#ffeb3b", "#ffc107", "#ff9800", "#ff5722", "#795548", "#9e9e9e", "#607d8b", "#263238"];
+            var randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+        setInterval(randomColor,5000);
+    </script>
+</body>
+</html>
